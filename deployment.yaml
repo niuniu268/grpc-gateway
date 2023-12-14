@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
         - name: grpc-app
-          image: your-container-registry.azurecr.io/your-image-name:tag
+          image: mydesiredcontainerregistryname.azurecr.io/grpc-app:tag
           ports:
             - containerPort: 8090
+      imagePullSecrets:
+        - name: mydesiredcontainerregistryname-cred
